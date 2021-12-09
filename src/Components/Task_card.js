@@ -1,17 +1,21 @@
 import React from "react";
+import DeleteIcon from '@mui/icons-material/Delete';
+import IconButton from '@mui/material/IconButton';
 
 
-function Taskcard(){
+function Taskcard(props){
     return(
-        <div>
+        <div className= "line-item">
             <div>
-                This should display the task added.
+                {props.task}
             </div>
             <div>
-                E
+            <button className="edit" >Edit</button>
             </div>
             <div>
-                D
+            <IconButton aria-label="delete" size="small">
+            <DeleteIcon />
+            </IconButton>
             </div>
         </div>
     )
