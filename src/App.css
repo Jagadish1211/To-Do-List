@@ -1,6 +1,7 @@
 .container{
     width:25rem;
-    height:48.5rem;
+    min-height:48.5rem;
+    height:auto;
     background-color: #22577E;
     text-align: center;
     justify-self: center;
@@ -41,10 +42,9 @@ div input{
 
 
 .line-item{
-    display: flex;
+    display:inline-flex;
     background-color:#F6F2D4 ;
     width:22rem;
-    position: relative;
     font-size: 1.2rem;
     padding:0.2rem;
     align-items: center;
@@ -52,11 +52,18 @@ div input{
     
 }
 
+.item{
+    word-wrap:break-word;
+    flex-grow: 1;
+    flex-basis: content;
+}
 
 .edit{
     background-color: #95D1CC;
     font-family: 'Roboto', sans-serif;
-    position: absolute;
-    
+    flex-basis: content;
+    flex-grow: 0;
 
 }
+
+

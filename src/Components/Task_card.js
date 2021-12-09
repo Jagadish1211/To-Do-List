@@ -6,13 +6,13 @@ import IconButton from '@mui/material/IconButton';
 function Taskcard(props){
     return(
         <div className= "line-item">
-            <div>
+            <div className="item">
                 {props.task}
             </div>
             <div>
             <button className="edit" >Edit</button>
             </div>
-            <div>
+            <div className="del">
             <IconButton aria-label="delete" size="small">
             <DeleteIcon />
             </IconButton>
