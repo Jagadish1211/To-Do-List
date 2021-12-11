@@ -13,7 +13,7 @@ function Taskcard(props){
                 {props.task}
             </div>
             <div>
-            <button   className="edit" >Edit</button>
+            <button onClick={()=>{props.edit(props.index);}}  className="edit" >Edit</button>
             </div>
             <div className="del">
             <IconButton onClick={()=> props.oncheck(props.id)} name={props.id} aria-label="delete" size="small">
