@@ -1,3 +1,11 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
 .container{
     width:25rem;
     min-height:48.5rem;

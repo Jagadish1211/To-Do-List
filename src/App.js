@@ -4,9 +4,16 @@ import Taskcard from './Components/Task_card';
 import {useState} from "react";
 import { uuid } from 'uuidv4';
 
+ 
+
 function App() {
   const [entry,setEntry] = useState("");
-  const [task,setTask] = useState([]);
+  const [task,setTask] = useState([
+    {
+      id:uuid(),
+      taskname: ""
+    }
+  ]);
 
 
   const handlechange =function Handlechange(change){
@@ -15,8 +22,20 @@ function App() {
 
   const handlesubmit = function Handlesubmit(submit){
         submit.preventDefault();
-        setTask((prevValue)=> prevValue.concat(entry));
+        setTask((prevValue)=> prevValue.concat({
+          id:prevValue,
+          taskname:entry
+        }))
         setEntry("");
+  }
+
+  function Deltask(id){
+    setTask(task.filter((e)=> id !== e.id ))
+    }
+  
+  function Edittask(id){
+    const editthis = task.find((e)=> id ===e.id)
+    
   }
 
 
@@ -32,7 +51,7 @@ function App() {
       Add task
     </button>
     <div>
-     {task.map((tasks)=> (tasks?(<Taskcard key={uuid()} task={tasks} />): null))};
+     {task.map((tasks)=> (tasks.taskname?(<Taskcard key={uuid()} id={tasks.id} edit={Edittask} oncheck={Deltask} task={tasks.taskname} />): null))};
     </div>
     
    </div>
@@ -40,3 +59,4 @@ function App() {
 }
 
 export default App;
+
