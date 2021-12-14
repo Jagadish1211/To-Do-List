@@ -6,9 +6,6 @@ body{
     background-size:cover;
 }
 
-
-
-
 .container{
     width:25rem;
     min-height:48.5rem;
@@ -17,7 +14,6 @@ body{
     text-align: center;
     justify-self: center;
     border-radius: 5rem;
-    
 }
 .heading{
     font-size: 2.5rem;
@@ -35,45 +31,52 @@ div input{
     font-family: 'Nunito Sans', sans-serif;
     border: 0rem;
     border-radius: 1.2rem;
-
+    transition: transform 150ms ease-in;
     
 }
 
 .submitbtn{
     margin: 1rem;
-    width:6rem;
-    font-size: 1.1rem;
+    width:7rem;
+    font-size: 1rem;
     font-family: 'Nunito Sans', sans-serif;
     background-color: #f88379;
     color:white;
     border:0;
     border-radius: 1.1rem;
-
+    padding: 0.3em;
+    transition: background-color 125ms;
 }
 
-
-
-@keyframes taskfillin {
-    0% {background-color: red;} 
-    100% { background-color: blue;}
-    }
-
+.submitbtn:hover {
+    background-color: yellowgreen;
+    font-weight:600;
+}
 
 .line-item{
     display:inline-flex;
     background-color:#191970 ;
+    width:22rem;
     height:auto;
     color:white;
-    width:22rem;
     font-size: 1.5rem;
     padding:0.2rem;
     align-items: center;
     margin:0.7rem auto;
     border-radius: 1.2rem;
     white-space: initial;
+    transition: transform 150ms ease-in;
 }
 
+.line-item:hover{
+    transform: scale(1.05);
+    
+}
 
+div input:hover {
+    transform: scale(1.05);
+    
+}
 
 .item{
     word-wrap:break-word;
@@ -91,6 +94,11 @@ div input{
     border-radius: 0.8rem;
     margin-bottom: 0.35rem;
     border:0;
+    transition: background-color 125ms;
 }
 
+.edit:hover{
+    background-color: yellowgreen;
+    font-weight:500;
+}
 

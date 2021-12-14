@@ -50,14 +50,14 @@ function App() {
     <div className="Outer-container">
    <div className="container">
     <h1 className= "heading">
-      To-Do List
+      TO-DO List
     </h1>
-    <p styles={{color:"white"}}>{editingEntry === -1 ? "" : `Editing task ${editingEntry+1}`}</p>
+    <p styles={{color:"white"}}>{editingEntry === -1 ? "" : `EDITING TASK ${editingEntry+1}`}</p>
     <input onChange={handlechange} type="text" value={entry} placeholder="Add to list.." >
     
     </input>
     <button onClick={editingEntry === -1 ? handlesubmit : updateTask} className="submitbtn" type="submit" name="Add_task">
-      {editingEntry === -1 ?"Add Task": "Edit Task"}
+      {editingEntry === -1 ?"ADD TASK": "SAVE EDIT"}
     </button>
     <div>
      {task.map((tasks, index)=> (tasks.taskname?(<Taskcard key={uuid()} index={index} id={tasks.id} edit={Edittask} oncheck={Deltask} task={tasks.taskname} />): null))};

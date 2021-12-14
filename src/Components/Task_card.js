@@ -5,7 +5,6 @@ import IconButton from '@mui/material/IconButton';
 
 
 function Taskcard(props){
-    
    
     return(
         <div className= "line-item">
@@ -13,10 +12,10 @@ function Taskcard(props){
                 {props.task}
             </div>
             <div>
-            <button onClick={()=>{props.edit(props.index)}}  className="edit" >Edit</button>
+            <button onClick={()=>{props.edit(props.index)}}  className="edit" >EDIT</button>
             </div>
             <div className="del">
-            <IconButton style={{color: "#f88379"}} onClick={()=> props.oncheck(props.id)} name={props.id} aria-label="delete" size="small">
+            <IconButton className="delicon" style={{color: "#f88379"}} onClick={()=> props.oncheck(props.id)} name={props.id} aria-label="delete" size="small">
             <DeleteIcon  />
             </IconButton>
             </div>
