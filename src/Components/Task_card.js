@@ -13,10 +13,10 @@ function Taskcard(props){
                 {props.task}
             </div>
             <div>
-            <button onClick={()=>{props.edit(props.index);}}  className="edit" >Edit</button>
+            <button onClick={()=>{props.edit(props.index)}}  className="edit" >Edit</button>
             </div>
             <div className="del">
-            <IconButton onClick={()=> props.oncheck(props.id)} name={props.id} aria-label="delete" size="small">
+            <IconButton style={{color: "#f88379"}} onClick={()=> props.oncheck(props.id)} name={props.id} aria-label="delete" size="small">
             <DeleteIcon  />
             </IconButton>
             </div>
@@ -24,5 +24,5 @@ function Taskcard(props){
     )
 }
 
-export default Taskcard;
+export default Taskcard 
 

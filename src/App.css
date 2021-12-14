@@ -1,6 +1,9 @@
 body{
     display: flex;
     justify-content: center;
+    background-image: url("./Images/pexels-photo-3255761.jpeg");
+    background-repeat: no-repeat;
+    background-size:cover;
 }
 
 
@@ -10,10 +13,10 @@ body{
     width:25rem;
     min-height:48.5rem;
     height:auto;
-    background-color: #22577E;
+    background-color: #5D3FD3;
     text-align: center;
     justify-self: center;
-    border-radius: 0.4rem;
+    border-radius: 5rem;
     
 }
 .heading{
@@ -28,50 +31,66 @@ div input{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    font-size: 1.2rem;
-    font-family: 'Roboto', sans-serif;
-    border: 0.2rem solid white;
-    border-radius: 0.3rem;
+    font-size: 1.5rem;
+    font-family: 'Nunito Sans', sans-serif;
+    border: 0rem;
+    border-radius: 1.2rem;
 
     
 }
 
 .submitbtn{
-    margin: 0.5rem;
+    margin: 1rem;
     width:6rem;
-    font-size: 1.2rem;
-    font-family: 'Roboto', sans-serif;
-    background-color: #95D1CC;
-    border:0.9 rem solid white;
-    border-radius: 0.3rem;
+    font-size: 1.1rem;
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: #f88379;
+    color:white;
+    border:0;
+    border-radius: 1.1rem;
 
 }
 
+
+
+@keyframes taskfillin {
+    0% {background-color: red;} 
+    100% { background-color: blue;}
+    }
 
 
 .line-item{
     display:inline-flex;
-    background-color:#F6F2D4 ;
+    background-color:#191970 ;
+    height:auto;
+    color:white;
     width:22rem;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     padding:0.2rem;
     align-items: center;
     margin:0.7rem auto;
-    
+    border-radius: 1.2rem;
+    white-space: initial;
 }
+
+
 
 .item{
     word-wrap:break-word;
     flex-grow: 1;
-    flex-basis: content;
+    flex-basis:auto;
+    white-space: initial;
 }
 
 .edit{
-    background-color: #95D1CC;
+    background-color: #f88379;
+    color:white;
     font-family: 'Roboto', sans-serif;
     flex-basis: content;
     flex-grow: 0;
-
+    border-radius: 0.8rem;
+    margin-bottom: 0.35rem;
+    border:0;
 }
 
 

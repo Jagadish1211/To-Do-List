@@ -25,6 +25,7 @@ function App() {
     });
     setTask(newTask);
     setEntry("");
+    
   }
 
   function Deltask(id){
@@ -34,6 +35,7 @@ function App() {
   function Edittask(index){
     setEditingEntry(index);
     setEntry(task[index].taskname);
+   
   }
 
   function updateTask(){
@@ -45,11 +47,12 @@ function App() {
   }
 
   return (
+    <div className="Outer-container">
    <div className="container">
     <h1 className= "heading">
       To-Do List
     </h1>
-    <p>{editingEntry === -1 ? "" : `Editing task ${editingEntry}`}</p>
+    <p styles={{color:"white"}}>{editingEntry === -1 ? "" : `Editing task ${editingEntry+1}`}</p>
     <input onChange={handlechange} type="text" value={entry} placeholder="Add to list.." >
     
     </input>
@@ -60,6 +63,7 @@ function App() {
      {task.map((tasks, index)=> (tasks.taskname?(<Taskcard key={uuid()} index={index} id={tasks.id} edit={Edittask} oncheck={Deltask} task={tasks.taskname} />): null))};
     </div>
     
+   </div>
    </div>
   );
 }
